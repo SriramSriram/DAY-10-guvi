@@ -1585,5 +1585,89 @@ OUTPUT:
 7798590363
 
 
+QN 1e:Print the country which uses US Dollars as currency
+
+CODE: 
+// 1.initialize a xml http request
+var xhr = new XMLHttpRequest();
+
+// Open a request
+xhr.open("GET", "https://restcountries.com/v3.1/all");
+xhr.send();
+xhr.onload = function () {
+  //please provide me data if my request lies in range 200-299
+  if (xhr.status >= 200 && xhr.status < 300) {
+    let countryapi= JSON.parse(xhr.response)
+    
+// using resuce function to get the total poopulation:
+
+let usdcountry= countryapi.filter(function (country) {
+  return country.currencies?.hasOwnProperty("USD")
+});
+console.log(usdcountry);
+  }
+}
+
+
+OUTPUT:
+
+(20) [{…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}]
+0:
+altSpellings: ['UM']
+area: 34.2
+capitalInfo: {}
+car: {signs: Array(1), side: 'right'}
+cca2: "UM"
+cca3: "UMI"
+ccn3: "581"
+coatOfArms: {}
+continents: ['Oceania']
+currencies: {USD: {…}}
+demonyms: {eng: {…}}
+flag: "🇺🇲"
+flags: {png: 'https://flagcdn.com/w320/um.png', svg: 'https://flagcdn.com/um.svg'}
+idd: {root: '+2', suffixes: Array(1)}
+independent: false
+landlocked: false
+languages: {eng: 'English'}
+latlng: (2) [19.3, 166.633333]
+maps:
+googleMaps: "https://goo.gl/maps/hZKnrzgeK69dDyPF8"
+openStreetMaps: "https://www.openstreetmap.org/relation/6430384"
+[[Prototype]]: Object
+name: {common: 'United States Minor Outlying Islands', official: 'United States Minor Outlying Islands', nativeName: {…}}
+population: 300
+region: "Americas"
+startOfWeek: "monday"
+status: "officially-assigned"
+subregion: "North America"
+timezones: (3) ['UTC-11:00', 'UTC-10:00', 'UTC+12:00']
+tld: ['.us']
+translations: {ara: {…}, ces: {…}, cym: {…}, deu: {…}, est: {…}, …}
+unMember: false
+[[Prototype]]: Object
+1: {name: {…}, tld: Array(1), cca2: 'KH', ccn3: '116', cca3: 'KHM', …}
+2: {name: {…}, tld: Array(1), cca2: 'VG', ccn3: '092', cca3: 'VGB', …}
+3: {name: {…}, tld: Array(1), cca2: 'MP', ccn3: '580', cca3: 'MNP', …}
+4: {name: {…}, tld: Array(1), cca2: 'EC', ccn3: '218', cca3: 'ECU', …}
+5: {name: {…}, tld: Array(1), cca2: 'IO', ccn3: '086', cca3: 'IOT', …}
+6: {name: {…}, tld: Array(1), cca2: 'SV', ccn3: '222', cca3: 'SLV', …}
+7: {name: {…}, tld: Array(1), cca2: 'PA', ccn3: '591', cca3: 'PAN', …}
+8: {name: {…}, tld: Array(1), cca2: 'AS', ccn3: '016', cca3: 'ASM', …}
+9: {name: {…}, tld: Array(1), cca2: 'FM', ccn3: '583', cca3: 'FSM', …}
+10: {name: {…}, tld: Array(1), cca2: 'TL', ccn3: '626', cca3: 'TLS', …}
+11: {name: {…}, tld: Array(2), cca2: 'BQ', ccn3: '535', cca3: 'BES', …}
+12: {name: {…}, tld: Array(1), cca2: 'MH', ccn3: '584', cca3: 'MHL', …}
+13: {name: {…}, tld: Array(1), cca2: 'US', ccn3: '840', cca3: 'USA', …}
+14: {name: {…}, tld: Array(1), cca2: 'BS', ccn3: '044', cca3: 'BHS', …}
+15: {name: {…}, tld: Array(1), cca2: 'GU', ccn3: '316', cca3: 'GUM', …}
+16: {name: {…}, tld: Array(1), cca2: 'VI', ccn3: '850', cca3: 'VIR', …}
+17: {name: {…}, tld: Array(1), cca2: 'PW', ccn3: '585', cca3: 'PLW', …}
+18: {name: {…}, tld: Array(1), cca2: 'PR', ccn3: '630', cca3: 'PRI', …}
+19: {name: {…}, tld: Array(1), cca2: 'TC', ccn3: '796', cca3: 'TCA', …}
+length: 20
+[[Prototype]]: Array(0)
+
+
 
 
