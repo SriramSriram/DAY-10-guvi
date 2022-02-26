@@ -1554,12 +1554,35 @@ new.js:14
       
       
 
-QN 1D:
+QN 1D:Print the total population of countries using reduce function 
+
+CODE:
+// 1.initialize a xml http request
+var xhr = new XMLHttpRequest();
+
+// Open a request
+xhr.open("GET", "https://restcountries.com/v3.1/all");
+xhr.send();
+xhr.onload = function () {
+  //please provide me data if my request lies in range 200-299
+  if (xhr.status >= 200 && xhr.status < 300) {
+    let countryapi= JSON.parse(xhr.response)
+    
+// using resuce function to get the total poopulation:
+
+let totalPopulation = countryapi.reduce((acc,curr)=>{
+  return acc+curr.population
+},0);
+console.log(totalPopulation);
+  }
+}
 
 
 
+OUTPUT: 
 
 
+7798590363
 
 
 
