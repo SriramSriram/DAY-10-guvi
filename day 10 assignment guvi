@@ -1,0 +1,1566 @@
+DAY 10 TASK:
+
+QN 1a:Get all the countries from Asia continent /region using Filter function
+
+CODE:
+xhr.open("GET", "https://restcountries.com/v3.1/all");
+xhr.send();
+xhr.onload = function () {
+  //please provide me data if my request lies in range 200-299
+  if (xhr.status >= 200 && xhr.status < 300) {
+    let countryapi= JSON.parse(xhr.response)
+    
+// QN no.1a. Get all the countries from Asia continent /region using Filter function
+
+    let asiaCountries = countryapi.filter(country => country.region==="Asia")
+        
+            console.log(asiaCountries)
+        
+        }
+        
+    }
+    
+    OUTPUT:
+    
+    (50) [{…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}]
+0:
+altSpellings: (2) ['KH', 'Kingdom of Cambodia']
+area: 181035
+borders: (3) ['LAO', 'THA', 'VNM']
+capital: ['Phnom Penh']
+capitalInfo: {latlng: Array(2)}
+car: {signs: Array(1), side: 'right'}
+cca2: "KH"
+cca3: "KHM"
+ccn3: "116"
+cioc: "CAM"
+coatOfArms: {png: 'https://mainfacts.com/media/images/coats_of_arms/kh.png', svg: 'https://mainfacts.com/media/images/coats_of_arms/kh.svg'}
+continents: ['Asia']
+currencies: {KHR: {…}, USD: {…}}
+demonyms: {eng: {…}, fra: {…}}
+fifa: "CAM"
+flag: "🇰🇭"
+flags: {png: 'https://flagcdn.com/w320/kh.png', svg: 'https://flagcdn.com/kh.svg'}
+idd: {root: '+8', suffixes: Array(1)}
+independent: true
+landlocked: false
+languages: {khm: 'Khmer'}
+latlng: (2) [13, 105]
+maps: {googleMaps: 'https://goo.gl/maps/nztQtFSrUXZymJaW8', openStreetMaps: 'https://www.openstreetmap.org/relation/49898'}
+name:
+common: "Cambodia"
+nativeName: {khm: {…}}
+official: "Kingdom of Cambodia"
+[[Prototype]]: Object
+population: 16718971
+postalCode: {format: '#####', regex: '^(\\d{5})$'}
+region: "Asia"
+startOfWeek: "monday"
+status: "officially-assigned"
+subregion: "South-Eastern Asia"
+timezones: ['UTC+07:00']
+tld: ['.kh']
+translations: {ara: {…}, ces: {…}, cym: {…}, deu: {…}, est: {…}, …}
+unMember: true
+[[Prototype]]: Object
+1: {name: {…}, tld: Array(2), cca2: 'HK', ccn3: '344', cca3: 'HKG', …}
+2: {name: {…}, tld: Array(1), cca2: 'YE', ccn3: '887', cca3: 'YEM', …}
+3: {name: {…}, tld: Array(2), cca2: 'KZ', ccn3: '398', cca3: 'KAZ', …}
+4: {name: {…}, tld: Array(1), cca2: 'MO', ccn3: '446', cca3: 'MAC', …}
+5: {name: {…}, tld: Array(3), cca2: 'TW', ccn3: '158', cca3: 'TWN', …}
+6: {name: {…}, tld: Array(3), cca2: 'LK', ccn3: '144', cca3: 'LKA', …}
+7: {name: {…}, tld: Array(1), cca2: 'IL', ccn3: '376', cca3: 'ISR', …}
+8: {name: {…}, tld: Array(1), cca2: 'BT', ccn3: '064', cca3: 'BTN', …}
+9: {name: {…}, tld: Array(1), cca2: 'KP', ccn3: '408', cca3: 'PRK', …}
+10: {name: {…}, tld: Array(1), cca2: 'BH', ccn3: '048', cca3: 'BHR', …}
+11: {name: {…}, tld: Array(1), cca2: 'IQ', ccn3: '368', cca3: 'IRQ', …}
+12: {name: {…}, tld: Array(1), cca2: 'OM', ccn3: '512', cca3: 'OMN', …}
+13: {name: {…}, tld: Array(2), cca2: 'TH', ccn3: '764', cca3: 'THA', …}
+14: {name: {…}, tld: Array(1), cca2: 'AM', ccn3: '051', cca3: 'ARM', …}
+15: {name: {…}, tld: Array(1), cca2: 'GE', ccn3: '268', cca3: 'GEO', …}
+16: {name: {…}, tld: Array(2), cca2: 'QA', ccn3: '634', cca3: 'QAT', …}
+17: {name: {…}, tld: Array(1), cca2: 'MM', ccn3: '104', cca3: 'MMR', …}
+18: {name: {…}, tld: Array(1), cca2: 'PH', ccn3: '608', cca3: 'PHL', …}
+19: {name: {…}, tld: Array(1), cca2: 'BN', ccn3: '096', cca3: 'BRN', …}
+20: {name: {…}, tld: Array(1), cca2: 'MN', ccn3: '496', cca3: 'MNG', …}
+21: {name: {…}, tld: Array(1), cca2: 'TL', ccn3: '626', cca3: 'TLS', …}
+22: {name: {…}, tld: Array(1), cca2: 'KW', ccn3: '414', cca3: 'KWT', …}
+23: {name: {…}, tld: Array(1), cca2: 'BD', ccn3: '050', cca3: 'BGD', …}
+24: {name: {…}, tld: Array(1), cca2: 'MY', ccn3: '458', cca3: 'MYS', …}
+25: {name: {…}, tld: Array(1), cca2: 'VN', ccn3: '704', cca3: 'VNM', …}
+26: {name: {…}, tld: Array(1), cca2: 'NP', ccn3: '524', cca3: 'NPL', …}
+27: {name: {…}, tld: Array(3), cca2: 'SG', ccn3: '702', cca3: 'SGP', …}
+28: {name: {…}, tld: Array(1), cca2: 'AZ', ccn3: '031', cca3: 'AZE', …}
+29: {name: {…}, tld: Array(5), cca2: 'CN', ccn3: '156', cca3: 'CHN', …}
+30: {name: {…}, tld: Array(2), cca2: 'AE', ccn3: '784', cca3: 'ARE', …}
+31: {name: {…}, tld: Array(1), cca2: 'TM', ccn3: '795', cca3: 'TKM', …}
+32: {name: {…}, tld: Array(1), cca2: 'LA', ccn3: '418', cca3: 'LAO', …}
+33: {name: {…}, tld: Array(2), cca2: 'JO', ccn3: '400', cca3: 'JOR', …}
+34: {name: {…}, tld: Array(2), cca2: 'PS', ccn3: '275', cca3: 'PSE', …}
+35: {name: {…}, tld: Array(1), cca2: 'UZ', ccn3: '860', cca3: 'UZB', …}
+36: {name: {…}, tld: Array(2), cca2: 'JP', ccn3: '392', cca3: 'JPN', …}
+37: {name: {…}, tld: Array(1), cca2: 'ID', ccn3: '360', cca3: 'IDN', …}
+38: {name: {…}, tld: Array(1), cca2: 'KG', ccn3: '417', cca3: 'KGZ', …}
+39: {name: {…}, tld: Array(1), cca2: 'LB', ccn3: '422', cca3: 'LBN', …}
+40: {name: {…}, tld: Array(1), cca2: 'MV', ccn3: '462', cca3: 'MDV', …}
+41: {name: {…}, tld: Array(2), cca2: 'KR', ccn3: '410', cca3: 'KOR', …}
+42: {name: {…}, tld: Array(2), cca2: 'SY', ccn3: '760', cca3: 'SYR', …}
+43: {name: {…}, tld: Array(1), cca2: 'AF', ccn3: '004', cca3: 'AFG', …}
+44: {name: {…}, tld: Array(1), cca2: 'TJ', ccn3: '762', cca3: 'TJK', …}
+45: {name: {…}, tld: Array(1), cca2: 'TR', ccn3: '792', cca3: 'TUR', …}
+46: {name: {…}, tld: Array(1), cca2: 'IN', ccn3: '356', cca3: 'IND', …}
+47: {name: {…}, tld: Array(1), cca2: 'PK', ccn3: '586', cca3: 'PAK', …}
+48: {name: {…}, tld: Array(2), cca2: 'IR', ccn3: '364', cca3: 'IRN', …}
+49: {name: {…}, tld: Array(2), cca2: 'SA', ccn3: '682', cca3: 'SAU', …}
+length: 50
+[[Prototype]]: Array(0)
+
+
+QN.1b:
+
+CODE:
+
+// 1.initialize a xml http request
+var xhr = new XMLHttpRequest();
+
+// Open a request
+xhr.open("GET", "https://restcountries.com/v3.1/all");
+xhr.send();
+xhr.onload = function () {
+  //please provide me data if my request lies in range 200-299
+  if (xhr.status >= 200 && xhr.status < 300) {
+    let countryapi= JSON.parse(xhr.response)
+    
+
+    let population = countryapi.filter(country => country.population<200000)
+        
+            console.log("countries with less than 2lakh population:", population)
+        
+        }
+        
+    }
+
+OUTPUT:
+(62) [{…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}]
+0:
+altSpellings: Array(1)
+0: "TK"
+length: 1
+[[Prototype]]: Array(0)
+area: 12
+capital: ['Fakaofo']
+capitalInfo: {latlng: Array(2)}
+car: {signs: Array(1), side: 'left'}
+cca2: "TK"
+cca3: "TKL"
+ccn3: "772"
+coatOfArms: {}
+continents: ['Oceania']
+currencies: {NZD: {…}}
+demonyms: {eng: {…}}
+flag: "🇹🇰"
+flags: {png: 'https://flagcdn.com/w320/tk.png', svg: 'https://flagcdn.com/tk.svg'}
+idd: {root: '+6', suffixes: Array(1)}
+independent: false
+landlocked: false
+languages: {eng: 'English', smo: 'Samoan', tkl: 'Tokelauan'}
+latlng: (2) [-9, -172]
+maps: {googleMaps: 'https://goo.gl/maps/Ap5qN8qien6pT9UN6', openStreetMaps: 'https://www.openstreetmap.org/relation/2186600'}
+name: {common: 'Tokelau', official: 'Tokelau', nativeName: {…}}
+population: 1411
+region: "Oceania"
+startOfWeek: "monday"
+status: "officially-assigned"
+subregion: "Polynesia"
+timezones: ['UTC+13:00']
+tld: ['.tk']
+translations: {ara: {…}, ces: {…}, cym: {…}, deu: {…}, est: {…}, …}
+unMember: false
+[[Prototype]]: Object
+1:
+altSpellings: ['UM']
+area: 34.2
+capitalInfo: {}
+car: {signs: Array(1), side: 'right'}
+cca2: "UM"
+cca3: "UMI"
+ccn3: "581"
+coatOfArms: {}
+continents: ['Oceania']
+currencies: {USD: {…}}
+demonyms: {eng: {…}}
+flag: "🇺🇲"
+flags: {png: 'https://flagcdn.com/w320/um.png', svg: 'https://flagcdn.com/um.svg'}
+idd: {root: '+2', suffixes: Array(1)}
+independent: false
+landlocked: false
+languages: {eng: 'English'}
+latlng: (2) [19.3, 166.633333]
+maps: {googleMaps: 'https://goo.gl/maps/hZKnrzgeK69dDyPF8', openStreetMaps: 'https://www.openstreetmap.org/relation/6430384'}
+name: {common: 'United States Minor Outlying Islands', official: 'United States Minor Outlying Islands', nativeName: {…}}
+population: 300
+region: "Americas"
+startOfWeek: "monday"
+status: "officially-assigned"
+subregion: "North America"
+timezones: (3) ['UTC-11:00', 'UTC-10:00', 'UTC+12:00']
+tld: ['.us']
+translations: {ara: {…}, ces: {…}, cym: {…}, deu: {…}, est: {…}, …}
+unMember: false
+[[Prototype]]: Object
+2: {name: {…}, tld: Array(1), cca2: 'WS', ccn3: '882', cca3: 'WSM', …}
+3: {name: {…}, tld: Array(1), cca2: 'VG', ccn3: '092', cca3: 'VGB', …}
+4: {name: {…}, tld: Array(1), cca2: 'LI', ccn3: '438', cca3: 'LIE', …}
+5: {name: {…}, tld: Array(1), cca2: 'MP', ccn3: '580', cca3: 'MNP', …}
+6: {name: {…}, tld: Array(1), cca2: 'BM', ccn3: '060', cca3: 'BMU', …}
+7: {name: {…}, tld: Array(1), cca2: 'GS', ccn3: '239', cca3: 'SGS', …}
+8: {name: {…}, tld: Array(1), cca2: 'AQ', ccn3: '010', cca3: 'ATA', …}
+9: {name: {…}, tld: Array(1), cca2: 'CK', ccn3: '184', cca3: 'COK', …}
+10: {name: {…}, tld: Array(1), cca2: 'SX', ccn3: '534', cca3: 'SXM', …}
+11: {name: {…}, tld: Array(2), cca2: 'HM', ccn3: '334', cca3: 'HMD', …}
+12: {name: {…}, tld: Array(1), cca2: 'GL', ccn3: '304', cca3: 'GRL', …}
+13: {name: {…}, tld: Array(1), cca2: 'NR', ccn3: '520', cca3: 'NRU', …}
+14: {name: {…}, tld: Array(1), cca2: 'PM', ccn3: '666', cca3: 'SPM', …}
+15: {name: {…}, tld: Array(1), cca2: 'KY', ccn3: '136', cca3: 'CYM', …}
+16: {name: {…}, tld: Array(1), cca2: 'FO', ccn3: '234', cca3: 'FRO', …}
+17: {name: {…}, tld: Array(1), cca2: 'AW', ccn3: '533', cca3: 'ABW', …}
+18: {name: {…}, tld: Array(1), cca2: 'IO', ccn3: '086', cca3: 'IOT', …}
+19: {name: {…}, tld: Array(1), cca2: 'SJ', ccn3: '744', cca3: 'SJM', …}
+20: {name: {…}, tld: Array(1), cca2: 'MC', ccn3: '492', cca3: 'MCO', …}
+21: {name: {…}, tld: Array(1), cca2: 'AS', ccn3: '016', cca3: 'ASM', …}
+22: {name: {…}, tld: Array(1), cca2: 'KN', ccn3: '659', cca3: 'KNA', …}
+23: {name: {…}, tld: Array(1), cca2: 'VA', ccn3: '336', cca3: 'VAT', …}
+24: {name: {…}, tld: Array(1), cca2: 'FM', ccn3: '583', cca3: 'FSM', …}
+25: {name: {…}, tld: Array(1), cca2: 'FK', ccn3: '238', cca3: 'FLK', …}
+26: {name: {…}, tld: Array(1), cca2: 'BV', ccn3: '074', cca3: 'BVT', …}
+27: {name: {…}, tld: Array(1), cca2: 'PN', ccn3: '612', cca3: 'PCN', …}
+28: {name: {…}, tld: Array(1), cca2: 'AI', ccn3: '660', cca3: 'AIA', …}
+29: {name: {…}, tld: Array(1), cca2: 'CW', ccn3: '531', cca3: 'CUW', …}
+30: {name: {…}, tld: Array(2), cca2: 'MF', ccn3: '663', cca3: 'MAF', …}
+31: {name: {…}, tld: Array(1), cca2: 'VC', ccn3: '670', cca3: 'VCT', …}
+32: {name: {…}, tld: Array(2), cca2: 'BQ', ccn3: '535', cca3: 'BES', …}
+33: {name: {…}, tld: Array(1), cca2: 'WF', ccn3: '876', cca3: 'WLF', …}
+34: {name: {…}, tld: Array(1), cca2: 'DM', ccn3: '212', cca3: 'DMA', …}
+35: {name: {…}, tld: Array(1), cca2: 'AD', ccn3: '020', cca3: 'AND', …}
+36: {name: {…}, tld: Array(1), cca2: 'GI', ccn3: '292', cca3: 'GIB', …}
+37: {name: {…}, tld: Array(1), cca2: 'TV', ccn3: '798', cca3: 'TUV', …}
+38: {name: {…}, tld: Array(1), cca2: 'CC', ccn3: '166', cca3: 'CCK', …}
+39: {name: {…}, tld: Array(1), cca2: 'KI', ccn3: '296', cca3: 'KIR', …}
+40: {name: {…}, tld: Array(1), cca2: 'MH', ccn3: '584', cca3: 'MHL', …}
+41: {name: {…}, tld: Array(1), cca2: 'SC', ccn3: '690', cca3: 'SYC', …}
+42: {name: {…}, tld: Array(1), cca2: 'AX', ccn3: '248', cca3: 'ALA', …}
+43: {name: {…}, tld: Array(1), cca2: 'GU', ccn3: '316', cca3: 'GUM', …}
+44: {name: {…}, tld: Array(1), cca2: 'JE', ccn3: '832', cca3: 'JEY', …}
+45: {name: {…}, tld: Array(1), cca2: 'MS', ccn3: '500', cca3: 'MSR', …}
+46: {name: {…}, tld: Array(1), cca2: 'BL', ccn3: '652', cca3: 'BLM', …}
+47: {name: {…}, tld: Array(1), cca2: 'GD', ccn3: '308', cca3: 'GRD', …}
+48: {name: {…}, tld: Array(1), cca2: 'AG', ccn3: '028', cca3: 'ATG', …}
+49: {name: {…}, tld: Array(1), cca2: 'VI', ccn3: '850', cca3: 'VIR', …}
+50: {name: {…}, tld: Array(1), cca2: 'PW', ccn3: '585', cca3: 'PLW', …}
+51: {name: {…}, tld: Array(1), cca2: 'TO', ccn3: '776', cca3: 'TON', …}
+52: {name: {…}, tld: Array(1), cca2: 'NU', ccn3: '570', cca3: 'NIU', …}
+53: {name: {…}, tld: Array(1), cca2: 'LC', ccn3: '662', cca3: 'LCA', …}
+54: {name: {…}, tld: Array(1), cca2: 'GG', ccn3: '831', cca3: 'GGY', …}
+55: {name: {…}, tld: Array(1), cca2: 'SM', ccn3: '674', cca3: 'SMR', …}
+56: {name: {…}, tld: Array(1), cca2: 'NF', ccn3: '574', cca3: 'NFK', …}
+57: {name: {…}, tld: Array(1), cca2: 'TC', ccn3: '796', cca3: 'TCA', …}
+58: {name: {…}, tld: Array(1), cca2: 'TF', ccn3: '260', cca3: 'ATF', …}
+59: {name: {…}, tld: Array(1), cca2: 'CX', ccn3: '162', cca3: 'CXR', …}
+60: {name: {…}, tld: Array(2), cca2: 'SH', ccn3: '654', cca3: 'SHN', …}
+61: {name: {…}, tld: Array(1), cca2: 'IM', ccn3: '833', cca3: 'IMN', …}
+length: 62
+[[Prototype]]: Array(0)
+
+
+
+QN:1c: Print the following details name, capital, flag using forEach function
+
+CODE: 
+// 1.initialize a xml http request
+var xhr = new XMLHttpRequest();
+
+// Open a request
+xhr.open("GET", "https://restcountries.com/v3.1/all");
+xhr.send();
+xhr.onload = function () {
+  //please provide me data if my request lies in range 200-299
+  if (xhr.status >= 200 && xhr.status < 300) {
+    let countryapi= JSON.parse(xhr.response)
+    
+// using forEach function 
+    countryapi.forEach((value) => {
+      console.log(
+      `
+      Name:${value.name.common},
+      capital:${value.capital},
+      flag:${value.flag},
+      `)
+    }
+    )
+  }
+}
+
+OUTPUT:
+
+new.js:14 
+      Name:Montenegro,
+      capital:Podgorica,
+      flag:🇲🇪,
+      
+new.js:14 
+      Name:Tokelau,
+      capital:Fakaofo,
+      flag:🇹🇰,
+      
+new.js:14 
+      Name:Cuba,
+      capital:Havana,
+      flag:🇨🇺,
+      
+new.js:14 
+      Name:Guadeloupe,
+      capital:Basse-Terre,
+      flag:🇬🇵,
+      
+new.js:14 
+      Name:Greece,
+      capital:Athens,
+      flag:🇬🇷,
+      
+new.js:14 
+      Name:Martinique,
+      capital:Fort-de-France,
+      flag:🇲🇶,
+      
+new.js:14 
+      Name:Venezuela,
+      capital:Caracas,
+      flag:🇻🇪,
+      
+new.js:14 
+      Name:United States Minor Outlying Islands,
+      capital:undefined,
+      flag:🇺🇲,
+      
+new.js:14 
+      Name:Samoa,
+      capital:Apia,
+      flag:🇼🇸,
+      
+new.js:14 
+      Name:Cambodia,
+      capital:Phnom Penh,
+      flag:🇰🇭,
+      
+new.js:14 
+      Name:Hong Kong,
+      capital:City of Victoria,
+      flag:🇭🇰,
+      
+new.js:14 
+      Name:Mauritania,
+      capital:Nouakchott,
+      flag:🇲🇷,
+      
+new.js:14 
+      Name:Yemen,
+      capital:Sana'a,
+      flag:🇾🇪,
+      
+new.js:14 
+      Name:Djibouti,
+      capital:Djibouti,
+      flag:🇩🇯,
+      
+new.js:14 
+      Name:British Virgin Islands,
+      capital:Road Town,
+      flag:🇻🇬,
+      
+new.js:14 
+      Name:Egypt,
+      capital:Cairo,
+      flag:🇪🇬,
+      
+new.js:14 
+      Name:Croatia,
+      capital:Zagreb,
+      flag:🇭🇷,
+      
+new.js:14 
+      Name:Liechtenstein,
+      capital:Vaduz,
+      flag:🇱🇮,
+      
+new.js:14 
+      Name:Kazakhstan,
+      capital:Nur-Sultan,
+      flag:🇰🇿,
+      
+new.js:14 
+      Name:Denmark,
+      capital:Copenhagen,
+      flag:🇩🇰,
+      
+new.js:14 
+      Name:Benin,
+      capital:Porto-Novo,
+      flag:🇧🇯,
+      
+new.js:14 
+      Name:Northern Mariana Islands,
+      capital:Saipan,
+      flag:🇲🇵,
+      
+new.js:14 
+      Name:Bermuda,
+      capital:Hamilton,
+      flag:🇧🇲,
+      
+new.js:14 
+      Name:Italy,
+      capital:Rome,
+      flag:🇮🇹,
+      
+new.js:14 
+      Name:South Georgia,
+      capital:King Edward Point,
+      flag:🇬🇸,
+      
+new.js:14 
+      Name:South Africa,
+      capital:Pretoria,Bloemfontein,Cape Town,
+      flag:🇿🇦,
+      
+new.js:14 
+      Name:Rwanda,
+      capital:Kigali,
+      flag:🇷🇼,
+      
+new.js:14 
+      Name:Macau,
+      capital:undefined,
+      flag:🇲🇴,
+      
+new.js:14 
+      Name:Burundi,
+      capital:Gitega,
+      flag:🇧🇮,
+      
+new.js:14 
+      Name:French Guiana,
+      capital:Cayenne,
+      flag:🇬🇫,
+      
+new.js:14 
+      Name:Ukraine,
+      capital:Kyiv,
+      flag:🇺🇦,
+      
+new.js:14 
+      Name:Togo,
+      capital:Lomé,
+      flag:🇹🇬,
+      
+new.js:14 
+      Name:Taiwan,
+      capital:Taipei,
+      flag:🇹🇼,
+      
+new.js:14 
+      Name:Antarctica,
+      capital:undefined,
+      flag:🇦🇶,
+      
+new.js:14 
+      Name:Cook Islands,
+      capital:Avarua,
+      flag:🇨🇰,
+      
+new.js:14 
+      Name:Guinea-Bissau,
+      capital:Bissau,
+      flag:🇬🇼,
+      
+new.js:14 
+      Name:Sint Maarten,
+      capital:Philipsburg,
+      flag:🇸🇽,
+      
+new.js:14 
+      Name:Ivory Coast,
+      capital:Yamoussoukro,
+      flag:🇨🇮,
+      
+new.js:14 
+      Name:Iceland,
+      capital:Reykjavik,
+      flag:🇮🇸,
+      
+new.js:14 
+      Name:Paraguay,
+      capital:Asunción,
+      flag:🇵🇾,
+      
+new.js:14 
+      Name:Eswatini,
+      capital:Mbabane,
+      flag:🇸🇿,
+      
+new.js:14 
+      Name:Hungary,
+      capital:Budapest,
+      flag:🇭🇺,
+      
+new.js:14 
+      Name:Heard Island and McDonald Islands,
+      capital:undefined,
+      flag:🇭🇲,
+      
+new.js:14 
+      Name:Moldova,
+      capital:Chișinău,
+      flag:🇲🇩,
+      
+new.js:14 
+      Name:Chile,
+      capital:Santiago,
+      flag:🇨🇱,
+      
+new.js:14 
+      Name:Greenland,
+      capital:Nuuk,
+      flag:🇬🇱,
+      
+new.js:14 
+      Name:Nauru,
+      capital:Yaren,
+      flag:🇳🇷,
+      
+new.js:14 
+      Name:Uruguay,
+      capital:Montevideo,
+      flag:🇺🇾,
+      
+new.js:14 
+      Name:Ecuador,
+      capital:Quito,
+      flag:🇪🇨,
+      
+new.js:14 
+      Name:Sri Lanka,
+      capital:Sri Jayawardenepura Kotte,
+      flag:🇱🇰,
+      
+new.js:14 
+      Name:Saint Pierre and Miquelon,
+      capital:Saint-Pierre,
+      flag:🇵🇲,
+      
+new.js:14 
+      Name:Guatemala,
+      capital:Guatemala City,
+      flag:🇬🇹,
+      
+new.js:14 
+      Name:Ghana,
+      capital:Accra,
+      flag:🇬🇭,
+      
+new.js:14 
+      Name:Israel,
+      capital:Jerusalem,
+      flag:🇮🇱,
+      
+new.js:14 
+      Name:Mozambique,
+      capital:Maputo,
+      flag:🇲🇿,
+      
+new.js:14 
+      Name:Bhutan,
+      capital:Thimphu,
+      flag:🇧🇹,
+      
+new.js:14 
+      Name:Cayman Islands,
+      capital:George Town,
+      flag:🇰🇾,
+      
+new.js:14 
+      Name:North Korea,
+      capital:Pyongyang,
+      flag:🇰🇵,
+      
+new.js:14 
+      Name:Bahrain,
+      capital:Manama,
+      flag:🇧🇭,
+      
+new.js:14 
+      Name:Faroe Islands,
+      capital:Tórshavn,
+      flag:🇫🇴,
+      
+new.js:14 
+      Name:Aruba,
+      capital:Oranjestad,
+      flag:🇦🇼,
+      
+new.js:14 
+      Name:Iraq,
+      capital:Baghdad,
+      flag:🇮🇶,
+      
+new.js:14 
+      Name:British Indian Ocean Territory,
+      capital:Diego Garcia,
+      flag:🇮🇴,
+      
+new.js:14 
+      Name:Morocco,
+      capital:Rabat,
+      flag:🇲🇦,
+      
+new.js:14 
+      Name:North Macedonia,
+      capital:Skopje,
+      flag:🇲🇰,
+      
+new.js:14 
+      Name:Poland,
+      capital:Warsaw,
+      flag:🇵🇱,
+      
+new.js:14 
+      Name:Solomon Islands,
+      capital:Honiara,
+      flag:🇸🇧,
+      
+new.js:14 
+      Name:Brazil,
+      capital:Brasília,
+      flag:🇧🇷,
+      
+new.js:14 
+      Name:Slovenia,
+      capital:Ljubljana,
+      flag:🇸🇮,
+      
+new.js:14 
+      Name:Oman,
+      capital:Muscat,
+      flag:🇴🇲,
+      
+new.js:14 
+      Name:Thailand,
+      capital:Bangkok,
+      flag:🇹🇭,
+      
+new.js:14 
+      Name:Central African Republic,
+      capital:Bangui,
+      flag:🇨🇫,
+      
+new.js:14 
+      Name:El Salvador,
+      capital:San Salvador,
+      flag:🇸🇻,
+      
+new.js:14 
+      Name:Armenia,
+      capital:Yerevan,
+      flag:🇦🇲,
+      
+new.js:14 
+      Name:Honduras,
+      capital:Tegucigalpa,
+      flag:🇭🇳,
+      
+new.js:14 
+      Name:Zambia,
+      capital:Lusaka,
+      flag:🇿🇲,
+      
+new.js:14 
+      Name:Svalbard and Jan Mayen,
+      capital:Longyearbyen,
+      flag:🇸🇯,
+      
+new.js:14 
+      Name:Luxembourg,
+      capital:Luxembourg,
+      flag:🇱🇺,
+      
+new.js:14 
+      Name:Colombia,
+      capital:Bogotá,
+      flag:🇨🇴,
+      
+new.js:14 
+      Name:Barbados,
+      capital:Bridgetown,
+      flag:🇧🇧,
+      
+new.js:14 
+      Name:Libya,
+      capital:Tripoli,
+      flag:🇱🇾,
+      
+new.js:14 
+      Name:Serbia,
+      capital:Belgrade,
+      flag:🇷🇸,
+      
+new.js:14 
+      Name:Monaco,
+      capital:Monaco,
+      flag:🇲🇨,
+      
+new.js:14 
+      Name:Sweden,
+      capital:Stockholm,
+      flag:🇸🇪,
+      
+new.js:14 
+      Name:Niger,
+      capital:Niamey,
+      flag:🇳🇪,
+      
+new.js:14 
+      Name:Angola,
+      capital:Luanda,
+      flag:🇦🇴,
+      
+new.js:14 
+      Name:Panama,
+      capital:Panama City,
+      flag:🇵🇦,
+      
+new.js:14 
+      Name:Mauritius,
+      capital:Port Louis,
+      flag:🇲🇺,
+      
+new.js:14 
+      Name:Tanzania,
+      capital:Dodoma,
+      flag:🇹🇿,
+      
+new.js:14 
+      Name:Mali,
+      capital:Bamako,
+      flag:🇲🇱,
+      
+new.js:14 
+      Name:Cameroon,
+      capital:Yaoundé,
+      flag:🇨🇲,
+      
+new.js:14 
+      Name:Georgia,
+      capital:Tbilisi,
+      flag:🇬🇪,
+      
+new.js:14 
+      Name:Gambia,
+      capital:Banjul,
+      flag:🇬🇲,
+      
+new.js:14 
+      Name:Malta,
+      capital:Valletta,
+      flag:🇲🇹,
+      
+new.js:14 
+      Name:American Samoa,
+      capital:Pago Pago,
+      flag:🇦🇸,
+      
+new.js:14 
+      Name:Zimbabwe,
+      capital:Harare,
+      flag:🇿🇼,
+      
+new.js:14 
+      Name:Belize,
+      capital:Belmopan,
+      flag:🇧🇿,
+      
+new.js:14 
+      Name:Saint Kitts and Nevis,
+      capital:Basseterre,
+      flag:🇰🇳,
+      
+new.js:14 
+      Name:Vatican City,
+      capital:Vatican City,
+      flag:🇻🇦,
+      
+new.js:14 
+      Name:Micronesia,
+      capital:Palikir,
+      flag:🇫🇲,
+      
+new.js:14 
+      Name:Chad,
+      capital:N'Djamena,
+      flag:🇹🇩,
+      
+new.js:14 
+      Name:Belarus,
+      capital:Minsk,
+      flag:🇧🇾,
+      
+new.js:14 
+      Name:Canada,
+      capital:Ottawa,
+      flag:🇨🇦,
+      
+new.js:14 
+      Name:Argentina,
+      capital:Buenos Aires,
+      flag:🇦🇷,
+      
+new.js:14 
+      Name:Suriname,
+      capital:Paramaribo,
+      flag:🇸🇷,
+      
+new.js:14 
+      Name:Australia,
+      capital:Canberra,
+      flag:🇦🇺,
+      
+new.js:14 
+      Name:Guinea,
+      capital:Conakry,
+      flag:🇬🇳,
+      
+new.js:14 
+      Name:South Sudan,
+      capital:Juba,
+      flag:🇸🇸,
+      
+new.js:14 
+      Name:Namibia,
+      capital:Windhoek,
+      flag:🇳🇦,
+      
+new.js:14 
+      Name:Qatar,
+      capital:Doha,
+      flag:🇶🇦,
+      
+new.js:14 
+      Name:Myanmar,
+      capital:Naypyidaw,
+      flag:🇲🇲,
+      
+new.js:14 
+      Name:Falkland Islands,
+      capital:Stanley,
+      flag:🇫🇰,
+      
+new.js:14 
+      Name:Ireland,
+      capital:Dublin,
+      flag:🇮🇪,
+      
+new.js:14 
+      Name:São Tomé and Príncipe,
+      capital:São Tomé,
+      flag:🇸🇹,
+      
+new.js:14 
+      Name:Bouvet Island,
+      capital:undefined,
+      flag:🇧🇻,
+      
+new.js:14 
+      Name:Lithuania,
+      capital:Vilnius,
+      flag:🇱🇹,
+      
+new.js:14 
+      Name:DR Congo,
+      capital:Kinshasa,
+      flag:🇨🇩,
+      
+new.js:14 
+      Name:Philippines,
+      capital:Manila,
+      flag:🇵🇭,
+      
+new.js:14 
+      Name:Brunei,
+      capital:Bandar Seri Begawan,
+      flag:🇧🇳,
+      
+new.js:14 
+      Name:Sierra Leone,
+      capital:Freetown,
+      flag:🇸🇱,
+      
+new.js:14 
+      Name:Mongolia,
+      capital:Ulan Bator,
+      flag:🇲🇳,
+      
+new.js:14 
+      Name:Western Sahara,
+      capital:El Aaiún,
+      flag:🇪🇭,
+      
+new.js:14 
+      Name:Pitcairn Islands,
+      capital:Adamstown,
+      flag:🇵🇳,
+      
+new.js:14 
+      Name:Sudan,
+      capital:Khartoum,
+      flag:🇸🇩,
+      
+new.js:14 
+      Name:Timor-Leste,
+      capital:Dili,
+      flag:🇹🇱,
+      
+new.js:14 
+      Name:Anguilla,
+      capital:The Valley,
+      flag:🇦🇮,
+      
+new.js:14 
+      Name:Curaçao,
+      capital:Willemstad,
+      flag:🇨🇼,
+      
+new.js:14 
+      Name:Republic of the Congo,
+      capital:Brazzaville,
+      flag:🇨🇬,
+      
+new.js:14 
+      Name:Finland,
+      capital:Helsinki,
+      flag:🇫🇮,
+      
+new.js:14 
+      Name:Austria,
+      capital:Vienna,
+      flag:🇦🇹,
+      
+new.js:14 
+      Name:Ethiopia,
+      capital:Addis Ababa,
+      flag:🇪🇹,
+      
+new.js:14 
+      Name:Saint Martin,
+      capital:Marigot,
+      flag:🇲🇫,
+      
+new.js:14 
+      Name:Saint Vincent and the Grenadines,
+      capital:Kingstown,
+      flag:🇻🇨,
+      
+new.js:14 
+      Name:Bosnia and Herzegovina,
+      capital:Sarajevo,
+      flag:🇧🇦,
+      
+new.js:14 
+      Name:Comoros,
+      capital:Moroni,
+      flag:🇰🇲,
+      
+new.js:14 
+      Name:Caribbean Netherlands,
+      capital:Kralendijk,
+      flag:undefined,
+      
+new.js:14 
+      Name:Norway,
+      capital:Oslo,
+      flag:🇳🇴,
+      
+new.js:14 
+      Name:Kuwait,
+      capital:Kuwait City,
+      flag:🇰🇼,
+      
+new.js:14 
+      Name:Burkina Faso,
+      capital:Ouagadougou,
+      flag:🇧🇫,
+      
+new.js:14 
+      Name:Wallis and Futuna,
+      capital:Mata-Utu,
+      flag:🇼🇫,
+      
+new.js:14 
+      Name:Bangladesh,
+      capital:Dhaka,
+      flag:🇧🇩,
+      
+new.js:14 
+      Name:Dominica,
+      capital:Roseau,
+      flag:🇩🇲,
+      
+new.js:14 
+      Name:Jamaica,
+      capital:Kingston,
+      flag:🇯🇲,
+      
+new.js:14 
+      Name:Andorra,
+      capital:Andorra la Vella,
+      flag:🇦🇩,
+      
+new.js:14 
+      Name:Gibraltar,
+      capital:Gibraltar,
+      flag:🇬🇮,
+      
+new.js:14 
+      Name:Malaysia,
+      capital:Kuala Lumpur,
+      flag:🇲🇾,
+      
+new.js:14 
+      Name:United Kingdom,
+      capital:London,
+      flag:🇬🇧,
+      
+new.js:14 
+      Name:Madagascar,
+      capital:Antananarivo,
+      flag:🇲🇬,
+      
+new.js:14 
+      Name:Switzerland,
+      capital:Bern,
+      flag:🇨🇭,
+      
+new.js:14 
+      Name:Tuvalu,
+      capital:Funafuti,
+      flag:🇹🇻,
+      
+new.js:14 
+      Name:Algeria,
+      capital:Algiers,
+      flag:🇩🇿,
+      
+new.js:14 
+      Name:Russia,
+      capital:Moscow,
+      flag:🇷🇺,
+      
+new.js:14 
+      Name:Vietnam,
+      capital:Hanoi,
+      flag:🇻🇳,
+      
+new.js:14 
+      Name:Cocos (Keeling) Islands,
+      capital:West Island,
+      flag:🇨🇨,
+      
+new.js:14 
+      Name:Nepal,
+      capital:Kathmandu,
+      flag:🇳🇵,
+      
+new.js:14 
+      Name:Netherlands,
+      capital:Amsterdam,
+      flag:🇳🇱,
+      
+new.js:14 
+      Name:Kiribati,
+      capital:South Tarawa,
+      flag:🇰🇮,
+      
+new.js:14 
+      Name:Liberia,
+      capital:Monrovia,
+      flag:🇱🇷,
+      
+new.js:14 
+      Name:Somalia,
+      capital:Mogadishu,
+      flag:🇸🇴,
+      
+new.js:14 
+      Name:Romania,
+      capital:Bucharest,
+      flag:🇷🇴,
+      
+new.js:14 
+      Name:Marshall Islands,
+      capital:Majuro,
+      flag:🇲🇭,
+      
+new.js:14 
+      Name:Spain,
+      capital:Madrid,
+      flag:🇪🇸,
+      
+new.js:14 
+      Name:United States,
+      capital:Washington, D.C.,
+      flag:🇺🇸,
+      
+new.js:14 
+      Name:Réunion,
+      capital:Saint-Denis,
+      flag:🇷🇪,
+      
+new.js:14 
+      Name:Singapore,
+      capital:Singapore,
+      flag:🇸🇬,
+      
+new.js:14 
+      Name:Tunisia,
+      capital:Tunis,
+      flag:🇹🇳,
+      
+new.js:14 
+      Name:Azerbaijan,
+      capital:Baku,
+      flag:🇦🇿,
+      
+new.js:14 
+      Name:Papua New Guinea,
+      capital:Port Moresby,
+      flag:🇵🇬,
+      
+new.js:14 
+      Name:Lesotho,
+      capital:Maseru,
+      flag:🇱🇸,
+      
+new.js:14 
+      Name:Bahamas,
+      capital:Nassau,
+      flag:🇧🇸,
+      
+new.js:14 
+      Name:China,
+      capital:Beijing,
+      flag:🇨🇳,
+      
+new.js:14 
+      Name:Mayotte,
+      capital:Mamoudzou,
+      flag:🇾🇹,
+      
+new.js:14 
+      Name:Senegal,
+      capital:Dakar,
+      flag:🇸🇳,
+      
+new.js:14 
+      Name:Cyprus,
+      capital:Nicosia,
+      flag:🇨🇾,
+      
+new.js:14 
+      Name:United Arab Emirates,
+      capital:Abu Dhabi,
+      flag:🇦🇪,
+      
+new.js:14 
+      Name:Turkmenistan,
+      capital:Ashgabat,
+      flag:🇹🇲,
+      
+new.js:14 
+      Name:Laos,
+      capital:Vientiane,
+      flag:🇱🇦,
+      
+new.js:14 
+      Name:Belgium,
+      capital:Brussels,
+      flag:🇧🇪,
+      
+new.js:14 
+      Name:Jordan,
+      capital:Amman,
+      flag:🇯🇴,
+      
+new.js:14 
+      Name:Palestine,
+      capital:Ramallah,
+      flag:🇵🇸,
+      
+new.js:14 
+      Name:Seychelles,
+      capital:Victoria,
+      flag:🇸🇨,
+      
+new.js:14 
+      Name:Uzbekistan,
+      capital:Tashkent,
+      flag:🇺🇿,
+      
+new.js:14 
+      Name:New Caledonia,
+      capital:Nouméa,
+      flag:🇳🇨,
+      
+new.js:14 
+      Name:Åland Islands,
+      capital:Mariehamn,
+      flag:🇦🇽,
+      
+new.js:14 
+      Name:Nicaragua,
+      capital:Managua,
+      flag:🇳🇮,
+      
+new.js:14 
+      Name:Guam,
+      capital:Hagåtña,
+      flag:🇬🇺,
+      
+new.js:14 
+      Name:Kenya,
+      capital:Nairobi,
+      flag:🇰🇪,
+      
+new.js:14 
+      Name:French Polynesia,
+      capital:Papeetē,
+      flag:🇵🇫,
+      
+new.js:14 
+      Name:Jersey,
+      capital:Saint Helier,
+      flag:🇯🇪,
+      
+new.js:14 
+      Name:Czechia,
+      capital:Prague,
+      flag:🇨🇿,
+      
+new.js:14 
+      Name:Uganda,
+      capital:Kampala,
+      flag:🇺🇬,
+      
+new.js:14 
+      Name:New Zealand,
+      capital:Wellington,
+      flag:🇳🇿,
+      
+new.js:14 
+      Name:Montserrat,
+      capital:Plymouth,
+      flag:🇲🇸,
+      
+new.js:14 
+      Name:Saint Barthélemy,
+      capital:Gustavia,
+      flag:🇧🇱,
+      
+new.js:14 
+      Name:Costa Rica,
+      capital:San José,
+      flag:🇨🇷,
+      
+new.js:14 
+      Name:Mexico,
+      capital:Mexico City,
+      flag:🇲🇽,
+      
+new.js:14 
+      Name:Eritrea,
+      capital:Asmara,
+      flag:🇪🇷,
+      
+new.js:14 
+      Name:Grenada,
+      capital:St. George's,
+      flag:🇬🇩,
+      
+new.js:14 
+      Name:Antigua and Barbuda,
+      capital:Saint John's,
+      flag:🇦🇬,
+      
+new.js:14 
+      Name:Japan,
+      capital:Tokyo,
+      flag:🇯🇵,
+      
+new.js:14 
+      Name:Slovakia,
+      capital:Bratislava,
+      flag:🇸🇰,
+      
+new.js:14 
+      Name:United States Virgin Islands,
+      capital:Charlotte Amalie,
+      flag:🇻🇮,
+      
+new.js:14 
+      Name:Kosovo,
+      capital:Pristina,
+      flag:🇽🇰,
+      
+new.js:14 
+      Name:Vanuatu,
+      capital:Port Vila,
+      flag:🇻🇺,
+      
+new.js:14 
+      Name:Palau,
+      capital:Ngerulmud,
+      flag:🇵🇼,
+      
+new.js:14 
+      Name:Botswana,
+      capital:Gaborone,
+      flag:🇧🇼,
+      
+new.js:14 
+      Name:Tonga,
+      capital:Nuku'alofa,
+      flag:🇹🇴,
+      
+new.js:14 
+      Name:Fiji,
+      capital:Suva,
+      flag:🇫🇯,
+      
+new.js:14 
+      Name:France,
+      capital:Paris,
+      flag:🇫🇷,
+      
+new.js:14 
+      Name:Albania,
+      capital:Tirana,
+      flag:🇦🇱,
+      
+new.js:14 
+      Name:Portugal,
+      capital:Lisbon,
+      flag:🇵🇹,
+      
+new.js:14 
+      Name:Niue,
+      capital:Alofi,
+      flag:🇳🇺,
+      
+new.js:14 
+      Name:Peru,
+      capital:Lima,
+      flag:🇵🇪,
+      
+new.js:14 
+      Name:Indonesia,
+      capital:Jakarta,
+      flag:🇮🇩,
+      
+new.js:14 
+      Name:Saint Lucia,
+      capital:Castries,
+      flag:🇱🇨,
+      
+new.js:14 
+      Name:Guernsey,
+      capital:St. Peter Port,
+      flag:🇬🇬,
+      
+new.js:14 
+      Name:Kyrgyzstan,
+      capital:Bishkek,
+      flag:🇰🇬,
+      
+new.js:14 
+      Name:Germany,
+      capital:Berlin,
+      flag:🇩🇪,
+      
+new.js:14 
+      Name:Bolivia,
+      capital:Sucre,
+      flag:🇧🇴,
+      
+new.js:14 
+      Name:Dominican Republic,
+      capital:Santo Domingo,
+      flag:🇩🇴,
+      
+new.js:14 
+      Name:Puerto Rico,
+      capital:San Juan,
+      flag:🇵🇷,
+      
+new.js:14 
+      Name:Lebanon,
+      capital:Beirut,
+      flag:🇱🇧,
+      
+new.js:14 
+      Name:Maldives,
+      capital:Malé,
+      flag:🇲🇻,
+      
+new.js:14 
+      Name:San Marino,
+      capital:City of San Marino,
+      flag:🇸🇲,
+      
+new.js:14 
+      Name:South Korea,
+      capital:Seoul,
+      flag:🇰🇷,
+      
+new.js:14 
+      Name:Norfolk Island,
+      capital:Kingston,
+      flag:🇳🇫,
+      
+new.js:14 
+      Name:Syria,
+      capital:Damascus,
+      flag:🇸🇾,
+      
+new.js:14 
+      Name:Afghanistan,
+      capital:Kabul,
+      flag:🇦🇫,
+      
+new.js:14 
+      Name:Malawi,
+      capital:Lilongwe,
+      flag:🇲🇼,
+      
+new.js:14 
+      Name:Tajikistan,
+      capital:Dushanbe,
+      flag:🇹🇯,
+      
+new.js:14 
+      Name:Turkey,
+      capital:Ankara,
+      flag:🇹🇷,
+      
+new.js:14 
+      Name:Equatorial Guinea,
+      capital:Malabo,
+      flag:🇬🇶,
+      
+new.js:14 
+      Name:Turks and Caicos Islands,
+      capital:Cockburn Town,
+      flag:🇹🇨,
+      
+new.js:14 
+      Name:India,
+      capital:New Delhi,
+      flag:🇮🇳,
+      
+new.js:14 
+      Name:Nigeria,
+      capital:Abuja,
+      flag:🇳🇬,
+      
+new.js:14 
+      Name:Pakistan,
+      capital:Islamabad,
+      flag:🇵🇰,
+      
+new.js:14 
+      Name:Latvia,
+      capital:Riga,
+      flag:🇱🇻,
+      
+new.js:14 
+      Name:Iran,
+      capital:Tehran,
+      flag:🇮🇷,
+      
+new.js:14 
+      Name:Cape Verde,
+      capital:Praia,
+      flag:🇨🇻,
+      
+new.js:14 
+      Name:French Southern and Antarctic Lands,
+      capital:Port-aux-Français,
+      flag:🇹🇫,
+      
+new.js:14 
+      Name:Bulgaria,
+      capital:Sofia,
+      flag:🇧🇬,
+      
+new.js:14 
+      Name:Estonia,
+      capital:Tallinn,
+      flag:🇪🇪,
+      
+new.js:14 
+      Name:Christmas Island,
+      capital:Flying Fish Cove,
+      flag:🇨🇽,
+      
+new.js:14 
+      Name:Haiti,
+      capital:Port-au-Prince,
+      flag:🇭🇹,
+      
+new.js:14 
+      Name:Saint Helena, Ascension and Tristan da Cunha,
+      capital:Jamestown,
+      flag:🇸🇭,
+      
+new.js:14 
+      Name:Isle of Man,
+      capital:Douglas,
+      flag:🇮🇲,
+      
+new.js:14 
+      Name:Gabon,
+      capital:Libreville,
+      flag:🇬🇦,
+      
+new.js:14 
+      Name:Guyana,
+      capital:Georgetown,
+      flag:🇬🇾,
+      
+new.js:14 
+      Name:Saudi Arabia,
+      capital:Riyadh,
+      flag:🇸🇦,
+      
+new.js:14 
+      Name:Trinidad and Tobago,
+      capital:Port of Spain,
+      flag:🇹🇹,
+      
+      
+
+QN 1D:
+
+
+
+
+
+
+
+
+
